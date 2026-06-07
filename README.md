@@ -95,7 +95,7 @@ this GitHub repo, then click **Install** on **Crucible**.
 ### Claude Code (CLI)
 
 ```
-/plugin marketplace add <your-github-username>/crucible
+/plugin marketplace add kiranks34/crucible
 /plugin install crucible@crucible
 ```
 
