@@ -1,0 +1,17 @@
+{
+  "name": "crucible",
+  "owner": {
+    "name": "Kiran"
+  },
+  "metadata": {
+    "description": "Turn ideas into tested decisions: explore, choose, stress-test, visualize, decide.",
+    "version": "0.3.0"
+  },
+  "plugins": [
+    {
+      "name": "crucible",
+      "source": "./plugins/crucible",
+      "description": "Brainstorm ideas into clear briefs, stress-test each through a five-advisor panel, visualize the thinking, and compare verdicts so you decide. Includes the crucible orchestrator, the deliberation panel, and the visualize skill."
+    }
+  ]
+}
