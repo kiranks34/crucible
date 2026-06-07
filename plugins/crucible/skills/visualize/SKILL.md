@@ -1,0 +1,120 @@
+---
+name: visualize
+description: >-
+  Produce the right visual artifact for an idea-vetting session — a Decision Brief
+  card, a comparison table, idea cards, a decision matrix, a skim-first verdict
+  report, or a presentable decision summary / leadership deck. Used by the Crucible
+  skill at decision moments, or directly when the user asks to "see this", "put it
+  on a table", "make cards", "build a report", or "turn this into a deck I can
+  present". Chooses fast, self-contained, light-mode HTML for thinking during a
+  session, and a polished deck or one-pager for presenting. Do NOT use for factual
+  lookups or prose writing.
+---
+
+# Visualize
+
+Turn the moving parts of an idea-vetting session into a clear visual artifact —
+something to think with at a decision moment, or to present at the end. Built to
+pair with the **crucible** skill, but usable on its own.
+
+Two jobs, two output modes:
+
+- **Think** (during the session) — fast, self-contained **light-mode HTML**
+  artifacts that render anywhere and keep momentum: Decision Brief card, idea
+  cards, comparison table, decision matrix, verdict report.
+- **Present** (at the decision) — a polished **deck or one-page summary** for
+  sharing with others.
+
+## Two rules that override everything else
+
+1. **Every artifact is self-contained.** The reader must understand it WITHOUT the
+   chat. Never reference anything the artifact doesn't itself contain — no "see
+   Assumption 3", no "as discussed above". If the verdict leans on an assumption,
+   state that assumption IN the artifact, in plain words. Embed the brief wherever
+   a verdict references it.
+2. **Skim first, details on demand.** Reserve the top of the artifact (above the
+   fold) for the few things that drive the decision. Push depth into expandable
+   sections using native HTML `<details>`/`<summary>` — **no JavaScript**, so the
+   file stays a single self-contained page that opens in any browser. A reader
+   should get the call in five seconds and be able to drill down only if they want.
+
+## Pick the format by purpose AND environment
+
+1. **Think artifacts → self-contained light-mode HTML** (a single `.html` file,
+   inline CSS, no external dependencies; SVG for diagrams). Default for everything
+   mid-session.
+2. **Present artifact → offer both, let the user pick:**
+   - A polished **deck** if a presentation skill is installed (e.g.
+     **`designleadership-pptx-desktop`** — use its **Executive Decision** style for
+     a decision, **Workshop / Alignment** style for a brainstorm). Pass the
+     decision content (or the deliberation transcript) as the input.
+   - A clean, self-contained **one-page HTML** "executive summary."
+   - At Gate 2, present both options plainly and build whichever the user chooses;
+     if no presentation skill is installed, the one-pager is the only option — say
+     so rather than failing.
+   - If a spreadsheet is genuinely the right deliverable and an `xlsx` skill exists,
+     use it; otherwise an HTML table is fine.
+
+Never bundle or assume external skills — **detect and use what's present, degrade
+gracefully otherwise.** Always save the artifact as a file and give the user its
+path so they can open or present it.
+
+## Artifact catalogue
+
+**Decision-aids (the core set):**
+
+1. **Decision Brief card** — one idea framed for the go/no-go: core question,
+   problem, today's alternative (the status quo it must beat), the recommended
+   idea, the key assumptions in plain words, and what success looks like. Best at
+   the **brief-approval moment** in single-idea runs (Crucible Modes A/B), so the
+   user can approve at a glance. HTML card; keep it short and scannable.
+2. **Idea cards** — one card per candidate idea: title, one-line description, a
+   couple of pros/cons, and a "why it might matter" line. Strongest candidates
+   visually flagged. Best at *divergence*. HTML cards in a responsive grid.
+3. **Comparison table** — candidates as rows, criteria as columns (e.g. effort,
+   impact, risk, confidence). Best at the *selection* moment. HTML table, or
+   markdown if very small.
+4. **Decision matrix** — the deliberated ideas side by side with their verdicts.
+   Best at the *comparison* stage. HTML grid; emphasize the leaned-toward option
+   (border, badge) without faking precision.
+5. **Verdict report** — for one idea, after a stress-test. **Skim-first, expandable.**
+   - *Above the fold (always visible):* the framed question, the recommendation,
+     the single first step, the kill criterion, the biggest risk, and the five
+     advisor one-liners (flag each bull / bear / test).
+   - *Expandable `<details>` sections:* "What we tested" (the embedded brief — so
+     no reference dangles), each advisor's full argument, the anonymized peer
+     review plus the label reveal, the chairman's verdict in full (where they
+     agree / where they clash / blind spots caught), and the paths forward.
+   This single report replaces the old split between a "skim dashboard" and a
+   "long-form report": one file, skim by default, full depth one click away.
+6. **Decision summary / deck** — the presentable final. Offer BOTH a
+   `designleadership-pptx-desktop` **Executive Decision** deck and a one-page HTML
+   summary, and let the user pick.
+
+**Creative visuals (only when the user explicitly asks — never offer these
+proactively):** AI image, infographic, or mind-map. Use whatever image/diagram
+skill is available; if none is, say so plainly rather than producing something
+low-quality.
+
+## Design rules (so artifacts look made, not generated)
+
+- **Light mode by default.** One primary, one accent, two neutrals on a light
+  background. Generous whitespace, scannable at a glance.
+- **Hierarchy and grouping.** Above the fold = the decision-driving few. Group
+  related content; use cards, columns, and color-coding to show relationships, not
+  ornamentation. A plain table beats a noisy chart.
+- **Progressive disclosure with native `<details>`.** Collapsed by default for
+  everything below the skim layer; no JavaScript, no external libraries.
+- **Self-contained and clean.** One file, inline styles, no dangling references.
+- **Never fabricate data.** Visualize only what the session actually produced —
+  judgments, options, risks. No invented numbers, scores, or charts. If a score
+  isn't real, don't render one.
+- **Be honest about uncertainty.** Keep contested points visibly unresolved; don't
+  let clean styling make a debated call look settled.
+- **Plain language.** A newcomer should understand the artifact without narration.
+
+## Honesty & restraint
+
+- Produce an artifact when seeing genuinely beats reading — not by default.
+- Keep the content faithful to the briefs and verdicts; the visual is a
+  presentation of the thinking, never a substitute that adds claims.
