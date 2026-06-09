@@ -4,6 +4,12 @@
 something finished under heat — this does the same for your thinking. Ideas go in,
 a pressure-tested decision comes out, with you in control the whole way.
 
+Crucible is a **decision-quality engine, not a brainstorming toy.** Every idea is
+pressure-tested by five independent advisors, passed through a **Decision Gate** of
+verifiable checks (no fabricated scores), and returned as a **decision-first
+verdict** — the call up front, then the reasoning — with a falsifiable "kill it
+if…" line. In a hurry? A fast **Quick Check** gives you a triage read in one pass.
+
 ## What you can get done with it
 
 - **"I have a rough idea — is it any good?"** → It brainstorms the idea into a
@@ -16,6 +22,8 @@ a pressure-tested decision comes out, with you in control the whole way.
   hadn't considered — and parks every promising one so nothing gets lost.
 - **"I've already decided — just tell me if it holds up."** → It skips the
   brainstorming and takes your decision straight to the stress-test.
+- **"I just want a fast gut-check."** → A **Quick Check** returns the 2–3 biggest
+  risks, one kill criterion, and a lean — then offers the full panel if it matters.
 
 You stay the decision-maker. Crucible explores, pressure-tests, and advises — it
 never makes the call for you.
@@ -25,13 +33,14 @@ never makes the call for you.
 | Skill | What it does for you |
 |-------|----------------------|
 | **crucible** | Runs the whole journey: explore → choose → stress-test → compare → decide. |
-| **deliberation** | The stress-test itself: five independent advisors argue your idea from different angles, peer-review each other, and hand you a verdict plus a clear "stop if this happens" line. |
+| **deliberation** | The stress-test itself: five independent advisors argue your idea from different angles, peer-review each other, pass it through a Decision Gate of verifiable checks, and hand you a decision-first verdict (the call up front) plus a clear "stop if this happens" line. |
 | **visualize** | Turns the thinking into something you can see and present: comparison tables, idea cards, a decision matrix, a verdict dashboard, or a polished decision deck. |
 
 ## How it works
 
 It first reads your situation and picks the lightest path that fits:
 
+- **Just a gut-check?** A Quick Check triages it in one pass — no full panel.
 - **Already decided?** Skips brainstorming, goes straight to the stress-test.
 - **One idea to vet?** Brainstorms and sharpens that idea, then tests it.
 - **Exploring?** Brainstorms widely, surfaces adjacent ideas, and lets you choose
@@ -40,17 +49,25 @@ It first reads your situation and picks the lightest path that fits:
 ```
 Your request
    ↓
-Pick the path ── already decided ─────────────► frame it → confirm ─┐
+Pick the path ── gut-check ───────────────────► Quick Check (triage) → offer full panel
+              ├─ already decided ─────────────► frame it → confirm ─┐
               ├─ one idea ─► brainstorm & sharpen ──────────────────┤
               └─ exploring ► brainstorm + surface more ideas ───────┤
                                             you choose; rest parked   │
                                                                       ▼
                             Stress-test, one idea at a time (in order)
+                            → Decision Gate → decision-first verdict
                                                                       ▼
                             Compare verdicts (if you tested more than one)
                                                                       ▼
                             You decide: refine / go ahead / revisit later
 ```
+
+The **Decision Gate** is how a verdict stays honest: five verifiable checks —
+is the core assumption backed by evidence? how bad is the worst failure? is it
+reversible? is there a cheap way to test it? is a kill criterion defined? — feed a
+transparent rule that returns a clear band: **Proceed**, **Validate first**, or
+**Rethink**. No invented scores; you still make the final call.
 
 Three promises worth knowing: **one idea = one stress-test** (never blended, so
 each verdict is clean); **it won't over-work a simple request** (decided ideas skip
@@ -100,7 +117,7 @@ this GitHub repo, then click **Install** on **Crucible**.
 ```
 
 Then in any chat or task, say things like `vet this idea: …`, `help me choose
-between these ideas: …`, or `stress-test this decision: …`.
+between these ideas: …`, `stress-test this decision: …`, or `quick check this: …`.
 
 ## Repository layout
 
