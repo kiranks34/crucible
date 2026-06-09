@@ -1,8 +1,9 @@
 # Crucible
 
-**Turn ideas into tested decisions.** A crucible refines raw material into
-something finished under heat — this does the same for your thinking. Ideas go in,
-a pressure-tested decision comes out, with you in control the whole way.
+**Stress-test any idea or decision before you commit.** A crucible refines raw
+material into something finished under heat — this does the same for your thinking.
+A rough idea, a plan, or a decision you've already made goes in; a pressure-tested
+decision comes out, with you in control the whole way.
 
 Crucible is a **decision-quality engine, not a brainstorming toy.** Every idea is
 pressure-tested by five independent advisors, passed through a **Decision Gate** of
