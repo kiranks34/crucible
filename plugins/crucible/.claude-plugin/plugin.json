@@ -1,16 +1,16 @@
 {
   "name": "crucible",
-  "description": "Turn ideas into tested decisions. Brainstorm an idea (or several) into clear briefs, stress-test each through a five-advisor panel, visualize the thinking as tables/cards/dashboards/decks, and compare verdicts so you decide. Human-in-the-loop, with a Parking Lot so no promising idea is lost.",
-  "version": "0.3.0",
+  "description": "A decision-quality engine. Brainstorm an idea (or several) into clear briefs, stress-test each through a five-advisor panel, pass it through a Decision Gate of verifiable checks (no fabricated scores), and get a decision-first verdict with a falsifiable kill criterion so you decide. Includes a fast Quick Check for low-stakes calls. Human-in-the-loop, with a Parking Lot so no promising idea is lost.",
+  "version": "0.4.0",
   "author": {
     "name": "Kiran"
   },
   "keywords": [
-    "brainstorming",
-    "ideation",
+    "decision-quality",
     "decision-making",
     "stress-test",
     "red-team",
+    "ideation",
     "product-strategy"
   ]
 }
